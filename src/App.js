@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Sidebar from './components/Sidebar';
+import Project from './components/Project';
+import Calendar from './components/Calender';
+import AddHours from './components/TaskSheet';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='flex'>
+      <div className='sidebar'>
+        <Sidebar/>
+      </div>
+      <div className='project mt-10 flex-grow'>
+      <Project/>
+      </div>
     </div>
-  );
+    
+   
+  )
 }
 
 export default App;
