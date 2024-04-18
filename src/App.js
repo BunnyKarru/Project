@@ -2,9 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Sidebar from './components/Sidebar';
-import Project from './components/Project';
-import Calendar from './components/Calender';
-import AddHours from './components/TaskSheet';
+
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
         <Sidebar/>
       </div>
       <div className='project mt-10 flex-grow'>
-      <Project/>
+      <Outlet/>
       </div>
     </div>
     

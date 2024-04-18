@@ -1,13 +1,42 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import AddHours from './components/TaskSheet';
+import Calendar from './components/Calender';
+import Project from './components/Project';
+const router = createBrowserRouter([
+  {
+    path:'',
+    element:<App/>,
+    children:[
+      {
+        path:'',
+        element:<Project/>
+
+      },
+      {
+        path:'/tasksheet',
+        element:<AddHours/>
+      },
+      {
+        path:'/calender',
+        element:<Calendar/>
+      },
+      {
+        path:'/projects',
+        element:<Project/>
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

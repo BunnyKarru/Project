@@ -78,7 +78,7 @@ export default function Project() {
   {project.map((proj, index) => (
     <li key={index} className="flex items-center justify-between py-4">
       <div className="flex flex-col">
-        <span className="text-violet-600 font-bold">{proj.projectName}</span>
+        <span className="text-violet-600 font-bold text-xl">{proj.projectName}</span>
         <p className="text-gray-700">{proj.discription}</p>
       </div>
       <button
