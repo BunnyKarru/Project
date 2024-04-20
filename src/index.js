@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AddHours from './components/TaskSheet';
 import Calendar from './components/Calender';
 import Project from './components/Project';
+import User from './components/User';
 const router = createBrowserRouter([
   {
     path:'',
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path:'/projects',
         element:<Project/>
+      },
+      {
+        path:'/user',
+        element:<User/>
       }
     ]
   }
